@@ -1,4 +1,63 @@
-// Завдання:
+// interface Container<T> {
+//   items: T[];
+//   addItem(item: T): void;
+//   getItem(index: number): T | undefined;
+// }
+
+
+interface Container<T> {
+  items: T[];
+  addItem(item: T) => void;
+  getItem(index: number) => T | undefined;
+}
+
+
+// interface NumberContainer {
+//   items: number[];
+//   addItem: (item: number) => void;
+//   getItem: (index: number) => number;
+// }
+
+// const numberContainer: NumberContainer = {
+//   items: [5, 7, 9],
+//   addItem(item) {
+//     this.items.push(item);
+//   },
+//   getItem(index) {
+//     return this.items[index];
+//   },
+// };
+
+const numberContainer: Container<number> = {
+      items: [5, 7, 9],
+      addItem(item) {
+        this.items.push(item);
+      },
+      getItem(index) {
+        return this.items[index];
+      },
+    };
+
+console.log(numberContainer);
+
+const stringContainer: Container<string>= {
+    items: ["milk", "sugar", "tea"],
+    addItem(item) {
+      this.items.push(item);
+    },
+    getItem(index) {
+      return this.items[index];
+    },
+};
+
+console.log(stringContainer);
+
+// 3. Використовуйте методи addItem, getItem для перевірки роботи контейнера.
+
+
+
+
+
 
 // 1. Створіть інтерфейс Container, що містить:
 

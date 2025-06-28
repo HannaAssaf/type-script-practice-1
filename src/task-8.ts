@@ -1,7 +1,7 @@
 enum Role {
-  Admin,
-  User,
-  Guest,
+  Admin = "admin",
+  User = "user",
+  Guest = "guest",
 }
 
 const getPermissions = (role: Role): string[] => {
