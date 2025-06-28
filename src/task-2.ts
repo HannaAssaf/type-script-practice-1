@@ -1,9 +1,8 @@
-type Currency = "USD" | "EUR" | "GBP";
-
 interface ConvertCurrencyParams {
   amount: number;
-  currency: Currency;
+  currency: "USD" | "EUR" | "GBP";
 }
+
 function convertCurrency({ amount, currency }: ConvertCurrencyParams): void {
   console.log(`Converting ${amount} to ${currency}`);
 }
