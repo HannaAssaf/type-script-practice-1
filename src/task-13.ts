@@ -1,4 +1,6 @@
-function reducer(state, action) {
+type Action = { type: "increment" | "decrement" };
+
+function reducer(state: number, action: Action) {
   switch (action.type) {
     case "increment":
       return state + 1;
@@ -8,3 +10,7 @@ function reducer(state, action) {
       return state;
   }
 }
+
+console.log(reducer(0, { type: "increment" }));
+
+console.log(reducer(7, { type: "decrement" }));
