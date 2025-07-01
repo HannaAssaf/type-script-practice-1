@@ -1,4 +1,10 @@
-function fetchProducts() {
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+}
+
+function fetchProducts(): Promise<Product[]> {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([
