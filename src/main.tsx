@@ -1,6 +1,6 @@
 import "./style.css";
-// import "./task-1";
-// import "./task-2";
+import "./task-1";
+import "./task-2";
 import "./task-3";
 import "./task-4";
 import "./task-5";
@@ -16,6 +16,6 @@ import "./task-14";
 import "./task-15";
 import "./task-16";
 import "./task-17";
-// import "./task-18";
-// import "./task-19";
-// import "./task-20";
+import "./task-18";
+import "./task-19";
+import "./task-20";

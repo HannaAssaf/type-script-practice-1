@@ -1,15 +1,37 @@
 import axios from "axios";
 
-const fetchUsers = async () => {
-  const response = await axios.get(
+interface User {
+  id: number;
+  name: string;
+  phone: string;
+  email: string;
+  username: string;
+  website: string;
+  address: Address;
+}
+
+type Address = {
+  city: string;
+  street: string;
+  suite: string;
+  zipcode: string;
+  geo: Geo;
+};
+type Geo = {
+  lat: string;
+  lng: string;
+};
+
+const fetchUsersInfo = async (): Promise<User[]> => {
+  const response = await axios.get<User[]>(
     "https://jsonplaceholder.typicode.com/users"
   );
   return response.data;
 };
 
-const getUsers = async () => {
-  const users = await fetchUsers();
-  console.log(users);
+const getUsersInfo = async () => {
+  const usersInfo = await fetchUsersInfo();
+  console.log(usersInfo);
 };
 
-getUsers();
+getUsersInfo();
